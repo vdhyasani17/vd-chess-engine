@@ -1,0 +1,44 @@
+chess-engine/
+├-- include/
+│   ├── board.hpp
+│   ├── move.hpp
+│   ├── piece.hpp
+│   └── ...
+├── src/
+│   ├── board.cpp
+│   ├── move.cpp
+│   ├── main.cpp
+├── tests/
+│   ├── CMakeLists.txt
+│   ├── board_test.cpp
+│   └── ...
+└── CMakeLists.txt
+
+
+chess-engine/
+|-- include/
+|   |-- board.hpp
+|   |-- move.hpp
+|   |-- piece.hpp
+|   |-- ...
+|
+|-- src/
+|   |-- board.cpp
+|   |-- move.cpp
+|   |-- main.cpp
+|   |-- ...
+|
+|-- tests/
+|   |-- perft.cpp
+|   |-- board_test.cpp
+|   |-- ...
+|
+|-- CMakeLists.txt
+
+
+
+
+
+position fen rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+d
+perft 3
