@@ -1,6 +1,6 @@
 CMakeFiles/chess.dir/src/board.cpp.o: \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/../include/board.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/../include/board.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__config_site \
@@ -794,6 +794,9 @@ CMakeFiles/chess.dir/src/board.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/unistd.h \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/../include/common/types.hpp \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/../include/attack_tables.hpp \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/../include/magic_bitboards.hpp
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/../include/common/types.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/../include/attack_tables.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/../include/magic_bitboards.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/chrono \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/forward_list

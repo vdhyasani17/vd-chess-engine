@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine
+CMAKE_SOURCE_DIR = /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build
+CMAKE_BINARY_DIR = /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/perft.dir/depend.make
@@ -73,60 +73,60 @@ CMakeFiles/perft.dir/codegen:
 .PHONY : CMakeFiles/perft.dir/codegen
 
 CMakeFiles/perft.dir/src/board.cpp.o: CMakeFiles/perft.dir/flags.make
-CMakeFiles/perft.dir/src/board.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp
+CMakeFiles/perft.dir/src/board.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp
 CMakeFiles/perft.dir/src/board.cpp.o: CMakeFiles/perft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/perft.dir/src/board.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perft.dir/src/board.cpp.o -MF CMakeFiles/perft.dir/src/board.cpp.o.d -o CMakeFiles/perft.dir/src/board.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/perft.dir/src/board.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perft.dir/src/board.cpp.o -MF CMakeFiles/perft.dir/src/board.cpp.o.d -o CMakeFiles/perft.dir/src/board.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp
 
 CMakeFiles/perft.dir/src/board.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/perft.dir/src/board.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp > CMakeFiles/perft.dir/src/board.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp > CMakeFiles/perft.dir/src/board.cpp.i
 
 CMakeFiles/perft.dir/src/board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/perft.dir/src/board.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp -o CMakeFiles/perft.dir/src/board.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp -o CMakeFiles/perft.dir/src/board.cpp.s
 
 CMakeFiles/perft.dir/src/attack_tables.cpp.o: CMakeFiles/perft.dir/flags.make
-CMakeFiles/perft.dir/src/attack_tables.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/attack_tables.cpp
+CMakeFiles/perft.dir/src/attack_tables.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/attack_tables.cpp
 CMakeFiles/perft.dir/src/attack_tables.cpp.o: CMakeFiles/perft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/perft.dir/src/attack_tables.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perft.dir/src/attack_tables.cpp.o -MF CMakeFiles/perft.dir/src/attack_tables.cpp.o.d -o CMakeFiles/perft.dir/src/attack_tables.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/attack_tables.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/perft.dir/src/attack_tables.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perft.dir/src/attack_tables.cpp.o -MF CMakeFiles/perft.dir/src/attack_tables.cpp.o.d -o CMakeFiles/perft.dir/src/attack_tables.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/attack_tables.cpp
 
 CMakeFiles/perft.dir/src/attack_tables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/perft.dir/src/attack_tables.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/attack_tables.cpp > CMakeFiles/perft.dir/src/attack_tables.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/attack_tables.cpp > CMakeFiles/perft.dir/src/attack_tables.cpp.i
 
 CMakeFiles/perft.dir/src/attack_tables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/perft.dir/src/attack_tables.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/attack_tables.cpp -o CMakeFiles/perft.dir/src/attack_tables.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/attack_tables.cpp -o CMakeFiles/perft.dir/src/attack_tables.cpp.s
 
 CMakeFiles/perft.dir/src/magic_bitboards.cpp.o: CMakeFiles/perft.dir/flags.make
-CMakeFiles/perft.dir/src/magic_bitboards.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp
+CMakeFiles/perft.dir/src/magic_bitboards.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp
 CMakeFiles/perft.dir/src/magic_bitboards.cpp.o: CMakeFiles/perft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/perft.dir/src/magic_bitboards.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perft.dir/src/magic_bitboards.cpp.o -MF CMakeFiles/perft.dir/src/magic_bitboards.cpp.o.d -o CMakeFiles/perft.dir/src/magic_bitboards.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/perft.dir/src/magic_bitboards.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perft.dir/src/magic_bitboards.cpp.o -MF CMakeFiles/perft.dir/src/magic_bitboards.cpp.o.d -o CMakeFiles/perft.dir/src/magic_bitboards.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp
 
 CMakeFiles/perft.dir/src/magic_bitboards.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/perft.dir/src/magic_bitboards.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp > CMakeFiles/perft.dir/src/magic_bitboards.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp > CMakeFiles/perft.dir/src/magic_bitboards.cpp.i
 
 CMakeFiles/perft.dir/src/magic_bitboards.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/perft.dir/src/magic_bitboards.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp -o CMakeFiles/perft.dir/src/magic_bitboards.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp -o CMakeFiles/perft.dir/src/magic_bitboards.cpp.s
 
 CMakeFiles/perft.dir/tests/perft.cpp.o: CMakeFiles/perft.dir/flags.make
-CMakeFiles/perft.dir/tests/perft.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/perft.cpp
+CMakeFiles/perft.dir/tests/perft.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/perft.cpp
 CMakeFiles/perft.dir/tests/perft.cpp.o: CMakeFiles/perft.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/perft.dir/tests/perft.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perft.dir/tests/perft.cpp.o -MF CMakeFiles/perft.dir/tests/perft.cpp.o.d -o CMakeFiles/perft.dir/tests/perft.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/perft.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/perft.dir/tests/perft.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perft.dir/tests/perft.cpp.o -MF CMakeFiles/perft.dir/tests/perft.cpp.o.d -o CMakeFiles/perft.dir/tests/perft.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/perft.cpp
 
 CMakeFiles/perft.dir/tests/perft.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/perft.dir/tests/perft.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/perft.cpp > CMakeFiles/perft.dir/tests/perft.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/perft.cpp > CMakeFiles/perft.dir/tests/perft.cpp.i
 
 CMakeFiles/perft.dir/tests/perft.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/perft.dir/tests/perft.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/perft.cpp -o CMakeFiles/perft.dir/tests/perft.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/perft.cpp -o CMakeFiles/perft.dir/tests/perft.cpp.s
 
 # Object files for target perft
 perft_OBJECTS = \
@@ -144,7 +144,7 @@ perft: CMakeFiles/perft.dir/src/magic_bitboards.cpp.o
 perft: CMakeFiles/perft.dir/tests/perft.cpp.o
 perft: CMakeFiles/perft.dir/build.make
 perft: CMakeFiles/perft.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable perft"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable perft"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/perft.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -156,6 +156,6 @@ CMakeFiles/perft.dir/clean:
 .PHONY : CMakeFiles/perft.dir/clean
 
 CMakeFiles/perft.dir/depend:
-	cd /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles/perft.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles/perft.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/perft.dir/depend
 

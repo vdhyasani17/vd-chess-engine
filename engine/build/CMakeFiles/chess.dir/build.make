@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine
+CMAKE_SOURCE_DIR = /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build
+CMAKE_BINARY_DIR = /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/chess.dir/depend.make
@@ -73,60 +73,60 @@ CMakeFiles/chess.dir/codegen:
 .PHONY : CMakeFiles/chess.dir/codegen
 
 CMakeFiles/chess.dir/src/board.cpp.o: CMakeFiles/chess.dir/flags.make
-CMakeFiles/chess.dir/src/board.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp
+CMakeFiles/chess.dir/src/board.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp
 CMakeFiles/chess.dir/src/board.cpp.o: CMakeFiles/chess.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chess.dir/src/board.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/board.cpp.o -MF CMakeFiles/chess.dir/src/board.cpp.o.d -o CMakeFiles/chess.dir/src/board.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chess.dir/src/board.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/board.cpp.o -MF CMakeFiles/chess.dir/src/board.cpp.o.d -o CMakeFiles/chess.dir/src/board.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp
 
 CMakeFiles/chess.dir/src/board.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chess.dir/src/board.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp > CMakeFiles/chess.dir/src/board.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp > CMakeFiles/chess.dir/src/board.cpp.i
 
 CMakeFiles/chess.dir/src/board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess.dir/src/board.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/board.cpp -o CMakeFiles/chess.dir/src/board.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/board.cpp -o CMakeFiles/chess.dir/src/board.cpp.s
 
 CMakeFiles/chess.dir/src/attack_tables.cpp.o: CMakeFiles/chess.dir/flags.make
-CMakeFiles/chess.dir/src/attack_tables.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/attack_tables.cpp
+CMakeFiles/chess.dir/src/attack_tables.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/attack_tables.cpp
 CMakeFiles/chess.dir/src/attack_tables.cpp.o: CMakeFiles/chess.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chess.dir/src/attack_tables.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/attack_tables.cpp.o -MF CMakeFiles/chess.dir/src/attack_tables.cpp.o.d -o CMakeFiles/chess.dir/src/attack_tables.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/attack_tables.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chess.dir/src/attack_tables.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/attack_tables.cpp.o -MF CMakeFiles/chess.dir/src/attack_tables.cpp.o.d -o CMakeFiles/chess.dir/src/attack_tables.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/attack_tables.cpp
 
 CMakeFiles/chess.dir/src/attack_tables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chess.dir/src/attack_tables.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/attack_tables.cpp > CMakeFiles/chess.dir/src/attack_tables.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/attack_tables.cpp > CMakeFiles/chess.dir/src/attack_tables.cpp.i
 
 CMakeFiles/chess.dir/src/attack_tables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess.dir/src/attack_tables.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/attack_tables.cpp -o CMakeFiles/chess.dir/src/attack_tables.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/attack_tables.cpp -o CMakeFiles/chess.dir/src/attack_tables.cpp.s
 
 CMakeFiles/chess.dir/src/magic_bitboards.cpp.o: CMakeFiles/chess.dir/flags.make
-CMakeFiles/chess.dir/src/magic_bitboards.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp
+CMakeFiles/chess.dir/src/magic_bitboards.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp
 CMakeFiles/chess.dir/src/magic_bitboards.cpp.o: CMakeFiles/chess.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chess.dir/src/magic_bitboards.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/magic_bitboards.cpp.o -MF CMakeFiles/chess.dir/src/magic_bitboards.cpp.o.d -o CMakeFiles/chess.dir/src/magic_bitboards.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chess.dir/src/magic_bitboards.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/magic_bitboards.cpp.o -MF CMakeFiles/chess.dir/src/magic_bitboards.cpp.o.d -o CMakeFiles/chess.dir/src/magic_bitboards.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp
 
 CMakeFiles/chess.dir/src/magic_bitboards.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chess.dir/src/magic_bitboards.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp > CMakeFiles/chess.dir/src/magic_bitboards.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp > CMakeFiles/chess.dir/src/magic_bitboards.cpp.i
 
 CMakeFiles/chess.dir/src/magic_bitboards.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess.dir/src/magic_bitboards.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp -o CMakeFiles/chess.dir/src/magic_bitboards.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp -o CMakeFiles/chess.dir/src/magic_bitboards.cpp.s
 
 CMakeFiles/chess.dir/src/main.cpp.o: CMakeFiles/chess.dir/flags.make
-CMakeFiles/chess.dir/src/main.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/main.cpp
+CMakeFiles/chess.dir/src/main.cpp.o: /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/main.cpp
 CMakeFiles/chess.dir/src/main.cpp.o: CMakeFiles/chess.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chess.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/main.cpp.o -MF CMakeFiles/chess.dir/src/main.cpp.o.d -o CMakeFiles/chess.dir/src/main.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chess.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/src/main.cpp.o -MF CMakeFiles/chess.dir/src/main.cpp.o.d -o CMakeFiles/chess.dir/src/main.cpp.o -c /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/main.cpp
 
 CMakeFiles/chess.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chess.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/main.cpp > CMakeFiles/chess.dir/src/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/main.cpp > CMakeFiles/chess.dir/src/main.cpp.i
 
 CMakeFiles/chess.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/main.cpp -o CMakeFiles/chess.dir/src/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/main.cpp -o CMakeFiles/chess.dir/src/main.cpp.s
 
 # Object files for target chess
 chess_OBJECTS = \
@@ -144,7 +144,7 @@ chess: CMakeFiles/chess.dir/src/magic_bitboards.cpp.o
 chess: CMakeFiles/chess.dir/src/main.cpp.o
 chess: CMakeFiles/chess.dir/build.make
 chess: CMakeFiles/chess.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable chess"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable chess"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chess.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -156,6 +156,6 @@ CMakeFiles/chess.dir/clean:
 .PHONY : CMakeFiles/chess.dir/clean
 
 CMakeFiles/chess.dir/depend:
-	cd /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/build/CMakeFiles/chess.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/build/CMakeFiles/chess.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/chess.dir/depend
 

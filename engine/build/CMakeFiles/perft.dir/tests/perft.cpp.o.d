@@ -1,5 +1,5 @@
 CMakeFiles/perft.dir/tests/perft.cpp.o: \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/perft.cpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/perft.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/chrono \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__config_site \
@@ -781,7 +781,7 @@ CMakeFiles/perft.dir/tests/perft.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/default_searcher.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/not_fn.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/perfect_forward.h \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/../include/board.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/../include/board.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
@@ -797,7 +797,7 @@ CMakeFiles/perft.dir/tests/perft.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/unistd.h \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/../include/common/types.hpp \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/../include/attack_tables.hpp \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/tests/../include/magic_bitboards.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/../include/common/types.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/../include/attack_tables.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/tests/../include/magic_bitboards.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iomanip

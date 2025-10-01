@@ -1,7 +1,7 @@
 CMakeFiles/perft.dir/src/magic_bitboards.cpp.o: \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/magic_bitboards.cpp \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/../include/magic_bitboards.hpp \
-  /Users/vasista_dhyasani/Desktop/Projects/titan-chess-engine/chess-engine/src/../include/common/types.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/magic_bitboards.cpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/../include/magic_bitboards.hpp \
+  /Users/vasista_dhyasani/Desktop/Projects/vd-chess-engine/engine/src/../include/common/types.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__config_site \
