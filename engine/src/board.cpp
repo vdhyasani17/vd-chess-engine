@@ -1,4 +1,7 @@
 #include "../include/board.hpp"
+#include <stack>   // for std::stack
+#include <cstring> // for memset
+#include <cstdint> // for uint64_t
 
 using namespace std;
 
@@ -212,9 +215,8 @@ int Board::get_piece_at_square(Square sq)
  */
 
 // change return type to void later
-bool Board::make_move(Square start, Square target, Color turn)
+bool Board::make_move(Square start, Square target, Color turn, vector<int> legal_moves)
 {
-    vector<int> legal_moves = generate_legal_moves(turn);
     int valid_move = 0;
 
     for (int move : legal_moves)
@@ -668,11 +670,33 @@ bool Board::is_stalemate(Color turn)
     return generate_legal_moves(turn).size() == 0 && !(get_attacks(turn == WHITE ? BLACK : WHITE) & pieces[turn][KING]);
 }
 
-int Board::perft(int depth, int max_depth, bool print_all, bool algebraic)
+#include <chrono>
+
+// Global accumulators
+uint64_t total_generate_legal_moves_ns = 0;
+uint64_t total_make_move_ns = 0;
+uint64_t total_unmake_move_ns = 0;
+
+// Helper macros for timing
+#define TIME_BLOCK_NS(accumulator, code_block)                                                              \
+    {                                                                                                       \
+        auto start_time = std::chrono::high_resolution_clock::now();                                        \
+        code_block;                                                                                         \
+        auto end_time = std::chrono::high_resolution_clock::now();                                          \
+        accumulator += std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count(); \
+    }
+
+int Board::perft(int depth, int max_depth)
 {
-    vector<int> legal_moves = generate_legal_moves(side_to_move);
+    vector<int> legal_moves;
+
+    // Measure generate_legal_moves
+    TIME_BLOCK_NS(total_generate_legal_moves_ns,
+                  legal_moves = generate_legal_moves(side_to_move);)
+
     int nodes = 0, current_move_nodes;
-    if (depth == 0 || is_checkmate(side_to_move) || is_stalemate(side_to_move))
+
+    if (depth == 0 || legal_moves.size() == 0)
     {
         return 1;
     }
@@ -683,37 +707,42 @@ int Board::perft(int depth, int max_depth, bool print_all, bool algebraic)
             int start = move & 0x3f;
             int target = (move >> 6) & 0x3f;
             int moving_piece = (move >> 12) & 0b111;
-            if (depth == max_depth || print_all)
+
+            if (depth == max_depth)
             {
-                if (algebraic)
-                {
-                    if (moving_piece == PAWN)
-                    {
-                        cout << coordinates(target) << ": ";
-                    }
-                    else
-                    {
-                        cout << piece_types[side_to_move][moving_piece] << coordinates(target) << ": ";
-                    }
-                }
-                else
-                {
-                    cout << coordinates(start) << coordinates(target) << ": ";
-                }
+                cout << coordinates(start) << coordinates(target) << ": ";
             }
-            make_move((Square)start, (Square)target, side_to_move);
-            current_move_nodes = perft(depth - 1, max_depth, print_all, algebraic);
+
+            // Measure make_move
+            TIME_BLOCK_NS(total_make_move_ns,
+                          make_move((Square)start, (Square)target, side_to_move, legal_moves);)
+
+            current_move_nodes = perft(depth - 1, max_depth);
             nodes += current_move_nodes;
-            unmake_move();
-            if (depth == max_depth || print_all)
+
+            // Measure unmake_move
+            TIME_BLOCK_NS(total_unmake_move_ns,
+                          unmake_move();)
+
+            if (depth == max_depth)
             {
                 cout << current_move_nodes << endl;
-                // print();
             }
         }
     }
 
     return nodes;
+}
+
+// Optional: function to print profiling results
+void Board::print_profiling()
+{
+    cout << "Total time spent in generate_legal_moves: "
+         << total_generate_legal_moves_ns / 1e6 << " ms" << endl;
+    cout << "Total time spent in make_move: "
+         << total_make_move_ns / 1e6 << " ms" << endl;
+    cout << "Total time spent in unmake_move: "
+         << total_unmake_move_ns / 1e6 << " ms" << endl;
 }
 
 string Board::coordinates(int square)

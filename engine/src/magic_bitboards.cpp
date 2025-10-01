@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <cstdint>
 #include <cstring>
 
 // Define static arrays

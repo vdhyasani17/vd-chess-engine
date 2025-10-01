@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stack>   // for std::stack
+#include <cstring> // for memset
+#include <cstdint> // for uint64_t
 #include "common/types.hpp"
 #include "attack_tables.hpp"
 
@@ -16,16 +19,18 @@ private:
     u64 blockers[2] = {};
     u64 one_bit = 1;
     Color side_to_move = WHITE;
-    stack<int> move_stack;
+    std::stack<int> move_stack;
     char piece_types[2][7] = {{' ', 'P', 'N', 'B', 'R', 'Q', 'K'},
                               {' ', 'p', 'n', 'b', 'r', 'q', 'k'}};
+
+    // time profiling
 
 public:
     void set_square(int i, int value);
     void load_fen(string fen);
     int type_of(char p);
     void print();
-    bool make_move(Square start, Square target, Color turn);
+    bool make_move(Square start, Square target, Color turn, vector<int> legal_moves);
     bool unmake_move();
     vector<int> generate_legal_moves(Color color);
     bool is_legal_move(Square start, Square target, Color turn);
@@ -37,6 +42,7 @@ public:
     bool is_stalemate(Color turn);
     u64 generate_checkmask(Color turn);
     int get_piece_at_square(Square sq);
-    int perft(int depth, int max_depth, bool print_all, bool algebraic);
+    int perft(int depth, int max_depth);
     string coordinates(int square);
+    void print_profiling();
 };

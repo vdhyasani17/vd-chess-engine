@@ -15,7 +15,8 @@ int main()
     bool side = board.get_side();
     string to_move;
     bool move_made;
-    while (!(board.is_checkmate((Color)side) || board.is_stalemate((Color)side)))
+    vector<int> legal_moves = board.generate_legal_moves((Color)side);
+    while (legal_moves.size())
     {
         move_made = false;
         while (!move_made)
@@ -41,12 +42,13 @@ int main()
 
             auto [sq1, sq2] = convert_input(move);
 
-            move_made = board.make_move(sq1, sq2, (Color)side);
+            move_made = board.make_move(sq1, sq2, (Color)side, legal_moves);
             if (move_made)
             {
                 board.print();
                 cout << endl;
                 side ^= 1;
+                legal_moves = board.generate_legal_moves((Color)side);
             }
             else
                 cout << "Illegal move" << endl;

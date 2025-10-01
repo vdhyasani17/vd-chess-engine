@@ -13,12 +13,13 @@ int main()
     board.print();
     cout << endl;
     auto start = chrono::high_resolution_clock::now();
-    int total_nodes = board.perft(depth, depth, false, false);
+    int total_nodes = board.perft(depth, depth);
     auto end = chrono::high_resolution_clock::now();
 
     chrono::duration<double> elapsed_seconds = end - start;
     double nps = total_nodes / elapsed_seconds.count();
 
+    board.print_profiling();
     cout << "Total nodes: " << total_nodes << endl;
     cout << "Elapsed time: " << elapsed_seconds.count() << " seconds" << endl;
     cout << fixed << setprecision(0) << "Nodes per second (NPS): " << nps << endl;
