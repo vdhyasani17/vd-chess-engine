@@ -3,6 +3,8 @@ project(chess-engine)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+
 # Include header files
 include_directories(include)
 
