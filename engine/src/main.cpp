@@ -6,7 +6,7 @@ pair<Square, Square> convert_input(string coordinates);
 int main()
 {
     Board board;
-    board.load_fen("8/3k4/8/5p2/4K3/8/8/3R4 w - - 0 1");
+    board.load_fen("r3k2r/pppp1ppp/2n5/2b1pbq1/2B1P3/2n5/PPPP1PPP/RNBQK2R b KQkq - 0 1");
     string move;
     Square squares[2];
 

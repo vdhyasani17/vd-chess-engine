@@ -22,6 +22,12 @@ enum PieceType
     KING = 6
 };
 
+enum CastleSide
+{
+    KINGSIDE,
+    QUEENSIDE
+};
+
 enum Square
 {
     a8,

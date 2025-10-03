@@ -22,8 +22,9 @@ private:
     std::stack<int> move_stack;
     char piece_types[2][7] = {{' ', 'P', 'N', 'B', 'R', 'Q', 'K'},
                               {' ', 'p', 'n', 'b', 'r', 'q', 'k'}};
-
-    // time profiling
+    u64 enpassant_square;
+    u64 castle_masks[2][2] = {{0b11ULL << 61, 0b111ULL << 57}, {0b11ULL << 5, 0b111ULL << 1}};
+    u64 castle_square[2][2] = {{1ULL << 62, 1ULL << 58}, {1ULL << 6, 1ULL << 2}};
 
 public:
     void set_square(int i, int value);
@@ -42,7 +43,7 @@ public:
     bool is_stalemate(Color turn);
     u64 generate_checkmask(Color turn);
     int get_piece_at_square(Square sq);
-    int perft(int depth, int max_depth);
+    long perft(int depth, int max_depth);
     string coordinates(int square);
     void print_profiling();
 };

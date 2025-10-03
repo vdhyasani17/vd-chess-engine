@@ -46,6 +46,44 @@ void Board::load_fen(string fen)
     {
         side_to_move = fen[j] == 'w' ? WHITE : BLACK;
     }
+
+    j++;
+    // 3. Castling Rights (Part 3 of FEN) - SKIPPING for now
+    while (j < fen.length() && fen[j] == ' ')
+    {
+        j++;
+    }
+    while (j < fen.length() && fen[j] != ' ')
+    {
+        j++;
+    } // Skip the castling rights field
+
+    // 4. En Passant Square (Part 4 of FEN)
+    while (j < fen.length() && fen[j] == ' ')
+    {
+        j++;
+    }
+
+    if (j < fen.length())
+    {
+        if (fen[j] == '-')
+        {
+            enpassant_square = 0ULL;
+        }
+        else
+        {
+            // The square is two characters long (e.g., "e3")
+            std::string sq_str = fen.substr(j, 2);
+            int fileValue = sq_str[0] - 'a';       // 'a' → 0, 'b' → 1, ..., 'h' → 7
+            int rankValue = 8 - (sq_str[1] - '0'); // '1' → 7, '8' → 0
+            Square sq_index = (Square)(8 * rankValue + fileValue);
+            cout << sq_str[0] << endl;
+
+            // Store the en passant square as a single bitboard
+            // Assuming enpassant_square is a u64 variable.
+            enpassant_square = (1ULL << sq_index);
+        }
+    }
     AttackTables::init();
 }
 
@@ -263,7 +301,7 @@ bool Board::make_move(Square start, Square target, Color turn, vector<int> legal
     {
         int enpassant_capture = turn == WHITE ? target + 8 : target - 8;
         pieces[!turn][PAWN] &= ~(1ULL << enpassant_capture);
-        blockers[!turn] &= ~(1ULL << target);
+        blockers[!turn] &= ~(1ULL << enpassant_capture);
         valid_move |= (PAWN << 15); // put PAWN as captured piece
     }
     else if ((valid_move & (0b111 << 18)) >> 18) // handle promotion
@@ -392,12 +430,51 @@ vector<int> Board::generate_legal_moves(Color color)
     while (bitboard)
     {
         int start = __builtin_ctzll(bitboard);
-        u64 attacks = AttackTables::king_attacks((Square)start) & ~blockers[color] & ~get_attacks(color == WHITE ? BLACK : WHITE);
+        u64 enemy_attacks = get_attacks(color == WHITE ? BLACK : WHITE);
+        // handle castling
+        bool king_in_check = (enemy_attacks & (1ULL << king_square)) != 0;
+
+        // 2. King-side Castling Check
+        bool kingside_clear = (castle_masks[color][KINGSIDE] & blockers_all) == 0;
+        bool kingside_safe = (castle_masks[color][KINGSIDE] & enemy_attacks) == 0;
+
+        cout << "king in check: " << king_in_check << endl;
+        cout << "kingside safe: " << kingside_safe << endl;
+        cout << "kingside clear: " << kingside_clear << endl;
+        bool can_kingside_castle = !king_in_check && kingside_clear && kingside_safe;
+
+        // 3. Queen-side Castling Check
+        bool queenside_clear = (castle_masks[color][QUEENSIDE] & blockers_all) == 0;
+        bool queenside_safe = (castle_masks[color][QUEENSIDE] & enemy_attacks) == 0;
+
+        bool can_queenside_castle = !king_in_check && queenside_clear && queenside_safe;
+        print_bitboard("kingside castle mask", castle_masks[color][KINGSIDE]);
+        print_bitboard("kingside blockers", (castle_masks[color][KINGSIDE] & blockers_all));
+        print_bitboard("kingside attacks", (castle_masks[color][KINGSIDE] & enemy_attacks));
+        cout << "kingside castle: " << can_kingside_castle << endl;
+        cout << "queenside castle: " << can_queenside_castle << endl;
+
+        u64 kingside_castle = can_kingside_castle ? castle_square[color][KINGSIDE] : 0ULL;
+        u64 queenside_castle = can_queenside_castle ? castle_square[color][QUEENSIDE] : 0ULL;
+
+        u64 attacks = (AttackTables::king_attacks((Square)start) & ~blockers[color] & ~enemy_attacks);
         while (attacks)
         {
             int target = __builtin_ctzll(attacks); // compiler instruction to get position of rightmost set bit
             legal_moves.push_back(KING << 12 | target << 6 | start);
             attacks &= attacks - 1;
+        }
+        /* TODO: FINISH CASTLING LOGIC */
+        int special_moves_flag = 0;
+        if (can_kingside_castle)
+        {
+            special_moves_flag = 3;
+            legal_moves.push_back(special_moves_flag << 21 | __builtin_ctz(kingside_castle) << 6 | king_square);
+        }
+        if (can_queenside_castle)
+        {
+            special_moves_flag = 4;
+            legal_moves.push_back(special_moves_flag << 21 | __builtin_ctz(kingside_castle) << 6 | king_square);
         }
         bitboard &= bitboard - 1;
     }
@@ -417,9 +494,9 @@ vector<int> Board::generate_legal_moves(Color color)
     while (sliders_bitboard)
     {
         pin_square = AttackTables::bishop_attacks(king_square, sliders_bitboard) & (1ULL << __builtin_ctzll(sliders_bitboard));
-        pin_ray = pin_square ? AttackTables::bishop_attacks(king_square, sliders_bitboard) & AttackTables::bishop_attacks((Square)__builtin_ctzll(pin_square), temp_board) | pin_square : 0;
-        int num_blockers_on_mask = __builtin_popcountll(pin_ray & blockers_all & blockers[color]);
-        if (num_blockers_on_mask == 1)
+        pin_ray = pin_square ? AttackTables::bishop_attacks(king_square, sliders_bitboard) & AttackTables::bishop_attacks((Square)__builtin_ctzll(pin_square), temp_board) | pin_square : 0ULL;
+        int num_blockers_on_mask = __builtin_popcountll((pin_ray & blockers_all) ^ pin_square);
+        if (num_blockers_on_mask == 1 && (pin_ray & blockers[color]))
         {
             pin_masks[__builtin_ctzll(pin_ray & blockers[color])] = pin_ray;
         }
@@ -430,9 +507,9 @@ vector<int> Board::generate_legal_moves(Color color)
     while (sliders_bitboard)
     {
         pin_square = AttackTables::rook_attacks(king_square, sliders_bitboard) & (1ULL << __builtin_ctzll(sliders_bitboard));
-        pin_ray = pin_square ? AttackTables::rook_attacks(king_square, sliders_bitboard) & AttackTables::rook_attacks((Square)__builtin_ctzll(pin_square), temp_board) | pin_square : 0;
-        int num_blockers_on_mask = __builtin_popcountll(pin_ray & blockers_all & blockers[color]);
-        if (num_blockers_on_mask == 1)
+        pin_ray = pin_square ? AttackTables::rook_attacks(king_square, sliders_bitboard) & AttackTables::rook_attacks((Square)__builtin_ctzll(pin_square), temp_board) | pin_square : 0ULL;
+        int num_blockers_on_mask = __builtin_popcountll((pin_ray & blockers_all) ^ pin_square);
+        if (num_blockers_on_mask == 1 && (pin_ray & blockers[color]))
         {
             pin_masks[__builtin_ctzll(pin_ray & blockers[color])] = pin_ray;
         }
@@ -445,7 +522,11 @@ vector<int> Board::generate_legal_moves(Color color)
     bitboard = pieces[color][PAWN];
     while (bitboard)
     {
-        u64 enpassant_square = (((0b001 << 21) & prev_move) != 0) ? 1ULL << (((0x3f & prev_move) + ((0xfc0 & prev_move) >> 6)) >> 1) : 0ULL;
+
+        if (prev_move)
+        {
+            enpassant_square = (((0b001 << 21) & prev_move) != 0) ? 1ULL << (((0x3f & prev_move) + ((0xfc0 & prev_move) >> 6)) >> 1) : 0ULL;
+        }
 
         int start = __builtin_ctzll(bitboard);
         u64 single_push, double_push, double_push_rank;
@@ -474,7 +555,7 @@ vector<int> Board::generate_legal_moves(Color color)
                 enpassant_capture = 0ULL;
             }
         }
-        u64 moves = (single_push | double_push | normal_captures | enpassant_capture) & checkmask & pin_masks[start];
+        u64 moves = (single_push | double_push | normal_captures | enpassant_capture) & (checkmask | enpassant_capture) & pin_masks[start];
 
         while (moves)
         {
@@ -686,19 +767,18 @@ uint64_t total_unmake_move_ns = 0;
         accumulator += std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count(); \
     }
 
-int Board::perft(int depth, int max_depth)
+long Board::perft(int depth, int max_depth)
 {
     vector<int> legal_moves;
 
     // Measure generate_legal_moves
-    TIME_BLOCK_NS(total_generate_legal_moves_ns,
-                  legal_moves = generate_legal_moves(side_to_move);)
+    legal_moves = generate_legal_moves(side_to_move);
 
-    int nodes = 0, current_move_nodes;
+    long nodes = 0, current_move_nodes = 0;
 
-    if (depth == 0 || legal_moves.size() == 0)
+    if (depth == 1 || legal_moves.size() == 0)
     {
-        return 1;
+        return legal_moves.size();
     }
     else
     {
@@ -714,15 +794,13 @@ int Board::perft(int depth, int max_depth)
             }
 
             // Measure make_move
-            TIME_BLOCK_NS(total_make_move_ns,
-                          make_move((Square)start, (Square)target, side_to_move, legal_moves);)
+            make_move((Square)start, (Square)target, side_to_move, legal_moves);
 
             current_move_nodes = perft(depth - 1, max_depth);
             nodes += current_move_nodes;
 
             // Measure unmake_move
-            TIME_BLOCK_NS(total_unmake_move_ns,
-                          unmake_move();)
+            unmake_move();
 
             if (depth == max_depth)
             {
